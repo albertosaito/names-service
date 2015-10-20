@@ -1,8 +1,6 @@
 package com.alberto.tinkering.rest;
 
 
-import java.util.List;
-
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
@@ -31,10 +29,19 @@ public class NamesServicesEndpoint extends Application
     * @since Oct 19, 2015
     *
     */
+   /**
+    * Represents getNames
+    *
+    * @param names
+    * @return DONE
+    * @since Oct 19, 2015
+    *
+    * @todo complete description
+    */
    @POST
    @Consumes ({"application/xml", "application/json"})
    @Path ("names")
-   public String getNames (final List <String> names)
+   public String getNames (final String... names)
    {
       for (final String name : names)
       {
